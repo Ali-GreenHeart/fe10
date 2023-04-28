@@ -2,6 +2,8 @@ import { lazy, Suspense } from 'react'
 
 import { Route, Routes } from "react-router"
 import Service from '../pages/Service'
+import Countries from '../pages/Countries'
+import Country from '../pages/Country'
 
 // import About from "../pages/About"
 const About = lazy(() => import("../pages/About"))
@@ -23,6 +25,8 @@ const WebRouting = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/service/:id" element={<Service />} />
+                <Route path="/countries" element={<Countries />} />
+                <Route path="/countries/:name" element={<Country />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Suspense>
