@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react'
-
 import { Route, Routes } from "react-router"
+
 
 const About = lazy(() => import("../pages/About"))
 const Contact = lazy(() => import("../pages/Contact"))
@@ -12,6 +12,8 @@ const Countries = lazy(() => import("../pages/Countries"))
 const Country = lazy(() => import("../pages/Country"))
 const ToDo = lazy(() => import("../components/ToDo"))
 const Counter = lazy(() => import("../components/Counter"))
+const Users = lazy(() => import("../pages/Users"))
+const UserDetail = lazy(() => import("../pages/Users/UserDetail"))
 
 
 // code-splitting  lazy-loading
@@ -28,9 +30,11 @@ const WebRouting = () => {
                 <Route path="/services" element={<Services />} />
                 <Route path="/service/:id" element={<Service />} />
                 <Route path="/countries" element={<Countries />} />
+                <Route path="/countries/:name" element={<Country />} />
                 <Route path='/counter' element={<Counter />} />
                 <Route path='/todo' element={<ToDo />} />
-                <Route path="/countries/:name" element={<Country />} />
+                <Route path='/users' element={<Users />} />
+                <Route path='/users/:id' element={<UserDetail />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Suspense>
