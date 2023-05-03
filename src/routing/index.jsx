@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { Route, Routes } from "react-router"
+import Hooks from '../pages/Hooks'
 
 
 const About = lazy(() => import("../pages/About"))
@@ -34,6 +35,7 @@ const WebRouting = () => {
                 <Route path='/counter' element={<Counter />} />
                 <Route path='/todo' element={<ToDo />} />
                 <Route path='/users' element={<Users />} />
+                <Route path='/hooks' element={<Hooks />} />
                 <Route path='/users/:id' element={<UserDetail />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
