@@ -6,11 +6,11 @@ const style = { display: 'block', margin: '20px 0' }
 const Users = ({ }) => {
     const [users, setUsers] = useState([])
 
-    // useEffect(() => {
-    axios.get(USERS_URL).then(({ data }) => {
-        setUsers(data)
-    })
-    // }, [])
+    useEffect(() => {
+        axios.get(USERS_URL).then(({ data }) => {
+            setUsers(data)
+        })
+    }, [])
 
     return (
         <>
