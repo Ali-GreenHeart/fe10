@@ -1,0 +1,11 @@
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.dataContainer {
+    width: 500px;
+    margin: 20px auto;
+    border: 2px solid;
+}
