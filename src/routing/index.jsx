@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Route, Routes } from "react-router"
 import Hooks from '../pages/Hooks'
 import GithubMain from '../pages/Github'
+import FollowersGithub from '../pages/Github/Followers'
 
 
 const About = lazy(() => import("../pages/About"))
@@ -38,6 +39,7 @@ const WebRouting = () => {
                 <Route path='/users' element={<Users />} />
                 <Route path='/hooks' element={<Hooks />} />
                 <Route path='/github' element={<GithubMain />} />
+                <Route path='/github-followers/:username' element={<FollowersGithub />} />
                 <Route path='/users/:id' element={<UserDetail />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
