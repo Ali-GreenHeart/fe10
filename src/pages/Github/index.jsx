@@ -64,7 +64,7 @@ const GithubMain = () => {
                 <p><b>Follower count: </b>{data.followers} <a target='_blank' href={`/github-followers/${username}`}>link</a> </p>
                 <p><b>Image: </b><img style={{ width: 150, height: 150 }} src={data.avatar_url} alt="" /></p>
                 <p><b>to account: </b><a target='_blank' href={data.html_url}>link</a></p>
-                <p><b>to repos: </b> <a target='_blank' href={data.repos_url}>link</a></p>
+                <p><b>to repos: </b> <a target='_blank' href={`/github-repos/${username}`}>link</a></p>
             </div>
         </>
     )

@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router"
 import Hooks from '../pages/Hooks'
 import GithubMain from '../pages/Github'
 import FollowersGithub from '../pages/Github/Followers'
+import ReposGithub from '../pages/Github/Repos'
 
 
 const About = lazy(() => import("../pages/About"))
@@ -40,6 +41,7 @@ const WebRouting = () => {
                 <Route path='/hooks' element={<Hooks />} />
                 <Route path='/github' element={<GithubMain />} />
                 <Route path='/github-followers/:username' element={<FollowersGithub />} />
+                <Route path='/github-repos/:username' element={<ReposGithub />} />
                 <Route path='/users/:id' element={<UserDetail />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
