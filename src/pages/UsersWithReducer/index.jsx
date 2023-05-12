@@ -1,17 +1,18 @@
 import axios from "axios"
 import { useEffect, useReducer } from "react"
 import { userReducerWithUseReducer } from "../../reducers/UserReducer"
-import { nameGenerator } from "../../utils"
-
-const URL = `https://jsonplaceholder.typicode.com/users`
+import { JSON_PLCHLDR_USERS_USER, nameGenerator } from "../../utils"
 
 const UsersWithReducer = ({ }) => {
     const [state, dispatch] = useReducer(userReducerWithUseReducer, [])
 
     useEffect(() => {
-        axios.get(URL).then(({ data }) => {
+
+        (async () => {
+            const { data } = await axios.get(JSON_PLCHLDR_USERS_USER)
             dispatch({ type: 'GET_DATA', payload: data })
-        })
+        })()
+
     }, [])
 
     return (

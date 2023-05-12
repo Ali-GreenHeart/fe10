@@ -9,3 +9,5 @@ export const nameGenerator = (len) => {
     }
     return ad
 }
+
+export const JSON_PLCHLDR_USERS_USER = `https://jsonplaceholder.typicode.com/users`
