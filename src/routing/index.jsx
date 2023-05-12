@@ -4,6 +4,7 @@ import Hooks from '../pages/Hooks'
 import GithubMain from '../pages/Github'
 import FollowersGithub from '../pages/Github/Followers'
 import ReposGithub from '../pages/Github/Repos'
+import UsersWithReducer from '../pages/UsersWithReducer'
 
 
 const About = lazy(() => import("../pages/About"))
@@ -43,6 +44,7 @@ const WebRouting = () => {
                 <Route path='/github-followers/:username' element={<FollowersGithub />} />
                 <Route path='/github-repos/:username' element={<ReposGithub />} />
                 <Route path='/users/:id' element={<UserDetail />} />
+                <Route path='/users-with-reducer' element={<UsersWithReducer />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Suspense>

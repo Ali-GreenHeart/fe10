@@ -8,6 +8,7 @@ const Navbar = () => {
             <a href="/users">Users</a>
             <a href="/hooks">Hooks</a>
             <a href="/github">Github</a>
+            <a href="/users-with-reducer">Users with reducer</a>
         </nav>
     )
 }
