@@ -1,12 +1,13 @@
 import { lazy, Suspense } from 'react'
 import { Route, Routes } from "react-router"
-import Hooks from '../pages/Hooks'
+import Auth from '../pages/Auth'
 import GithubMain from '../pages/Github'
 import FollowersGithub from '../pages/Github/Followers'
 import ReposGithub from '../pages/Github/Repos'
+import Hooks from '../pages/Hooks'
+import MuiPage from '../pages/MUI'
 import UsersWithReducer from '../pages/UsersWithReducer'
 import UsersWithRedux from '../pages/UsersWithRedux'
-import MuiPage from '../pages/MUI'
 
 
 const About = lazy(() => import("../pages/About"))
@@ -49,6 +50,7 @@ const WebRouting = () => {
                 <Route path='/users-with-reducer' element={<UsersWithReducer />} />
                 <Route path='/users-with-redux' element={<UsersWithRedux />} />
                 <Route path='/mui-page' element={<MuiPage />} />
+                <Route path='/auth' element={<Auth />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Suspense>
